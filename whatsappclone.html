@@ -1,87 +1,222 @@
 <html>
- <head>
-   <style>
-    *{
+
+<head>
+  <style>
+    * {
       margin: 0;
       padding: 0;
     }
-    
-    #container{
+
+    #container {
       display: flex;
       height: 93vh;
       margin: 20px;
     }
-    #sidebar{
+
+    #sidebar {
       padding: 10;
-      width: 30%;
-      height: 100%;
-      background-color: blue;
+      width: 35%;
+      height: 97.3%;
+      background-color: #3f3f3f;
     }
-    #main{
-      
-      width: 70%;
-      background-color: brown;
+
+    #main {
+
+      width: 65%;
+      background-color: #575757;
       height: 100%;
-    
+
     }
-    #box{
+
+    #box {
+      display: flex;
+      justify-content: space-between;
       padding: 15;
       height: 20px;
-      background-color: blueviolet;
+      background-color: #3f3f3f;
+
     }
-    #contacts{
+
+    #contacts {
+      overflow-y: scroll;
+      height: 85%;
+      background-color: #717171;
       
-      height: 100%;
-      background-color: yellow;
-    }
-    #profile_icon{
-      width: 30%;
-      background-color: aqua;
     }
 
-   </style>
- </head>
+    #profile_icon {
+      width: 0%;
+      
+    }
+
+    #side_icon {
+      width: 5%;
+      
+    }
+
+    #searchbar {
+      display: flex;
+      padding: 5;
+      margin-bottom: 10;
+
+
+    }
+
+    #searchbar input {
+
+      width: 100%;
+      height: 30px;
+      
+
+    }
+
+    #contacts ul {
+      text-decoration: none;
+
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: solid thin white;
+      padding: 20px;
+    }
+
+    .pic-and-name {
+      display: flex;
+      align-items: center;
+    }
+
+    li h2 {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
 <body>
-<div id="container">
-   <div id="sidebar">
+  <div id="container">
+    <div id="sidebar">
 
-       <div id="box">
+      <div id="box">
 
-           <div id="profile_icon">
-             <img src="C:\Users\hp\Downloads\62681-flat-icons-face-computer-design-avatar-icon.png" width="30px" height="30px"/>
-           </div>
-             <div id="side_icon">
+        <div id="profile_icon">
+          <img src="./images/avatar.jpg" width="30px" height="30px" />
+        </div>
+        <div id="side_icon">
+          <img src="./images/menu.png" width="30px" height="30px" />
 
-            </div>
-       </div>
+        </div>
 
-       <div id="contacts">
+      </div>
+      <div id="searchbar"> <input type="search" placeholder="Start your convorsation" /> </div>
+
+      <div id="contacts">
         <ul>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Shayan</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Ashlar</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Olivia</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Raoul</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Joseph</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Diana</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Kabir</li>
-          <li><img src="C:\Users\hp\Downloads\avatar-icon-images-4.jpg" class="round_icon" width="30px" height="30px">Grace</li>
 
 
-
-
-
-
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              32min ago
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              1pm
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              3pm
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              yestarday
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              26/3/2014
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              1/3/2014
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              14/3/2014
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              5/6/2013
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              7/7/2011
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="pic-and-name">
+              <img src="./images/avatar.jpg" class="round_icon" width="40px" height="40px">
+              <h2>Shayan</h2>
+            </div>
+            <div>
+              8/4/2009
+            </div>
+          </li>
 
 
         </ul>
-       </div>
-     </div>
-     <div id="main">
+      </div>
+    </div>
+    <div id="main">
 
 
-     </div> 
+    </div> 
+  </div> 
+
   </div>
-
-</div>
 </body>
+
 </html>
