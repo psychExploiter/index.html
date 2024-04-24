@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shri Dadaji Institute of Technology & Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #container{
+        display: flex;
+        height: 100%;
+      }
+      #header{
+        background-color: #8B0000;
+        width: 100%;
+       md:w-full
+      }
+      ul{
+        color: white;
+      }
+      #contact-us{
+        background-color: #FFE4E1;
+        color: #8B0000;
+      }
+     .container{
+      width: 100%;
+     }
+      .slides {
+            position: relative;
+            width: 120%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .active {
+            display: block;
+            opacity: 1;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+           
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+            
+        }
+
+        <!--for library box --->
+        #image_for_library{
+          width: 30%;
+          height: 100%;
+        }
+        #about_library{
+          width: 70%;
+          height: 100%;
+        }
+
+    </style>
+  </head>
+  <body>
+    
+      <div id="header" class="flex justify-between h-20 md:w-full lg:w-full">
+        <div class="text-lg ml-5 mt-1.5" >
+          <img
+            src="./images/Picsart_24-04-15_12-59-19-148.png"
+            width="70"
+            height="70"
+            alt="logo"
+          />
+        </div>
+        <div class="">
+          <ul
+            class="flex flex-row list-none space-x-5 p-2 text-#BC8F8F cursor-pointer ml-10 mt-5"
+          >
+            <li
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Home
+            </li>
+            <li
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              About Us
+            </li>
+
+            <li
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Acadmics
+            </li>
+
+            <li
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              T&P
+            </li>
+            <li
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+            >
+              Cells
+            </li>
+            <li id="contact-us"
+              class="ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 text-white rounded-full text-sm p-0.5"
+            >
+              Contact Us
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="container">
+      <div id="main" class=" w-full  ">
+        <div class="container">
+          <div class="slides relative  ">
+              <div class="slide active ">
+                  <!-- Slide 1 content -->
+        
+          <img src="./images/slide1.jpg"  alt="Slide 1" width="100%" height="100%"/>
+              </div>
+              <div class="slide">
+                  <!-- Slide 2 content -->
+                  <img src="./images/slide2.jpg" alt="Slide 2" width="100%" height="100%"/>
+              </div>
+              <div class="slide ">
+                  <!-- Slide 3 content -->
+                  <img src="./images/slide4.jpg" alt="Slide 3" width="100%" height="100%"/>
+              </div>
+              <!-- Add more slides as needed -->
+              <button onclick="prevSlide()" class="prev left-0"><img src="./images/pre.png" width="20" height="20"/></button>
+              <button onclick="nextSlide()" class="next right-0"><img src="./images/next.png" width="20" height="20"/></button>
+          </div>
+      </div>
+  
+      <script>
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.slide');
+          const totalSlides = slides.length;
+  
+          function showSlide(index) {
+              slides.forEach(slide => slide.classList.remove('active'));
+              slides[index].classList.add('active');
+          }
+  
+          function prevSlide() {
+              currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+              showSlide(currentSlide);
+          }
+  
+          function nextSlide() {
+              currentSlide = (currentSlide + 1) % totalSlides;
+              showSlide(currentSlide);
+          }
+  
+          function autoSlide() {
+              nextSlide();
+          }
+  
+          // Auto slide every 3 seconds
+          setInterval(autoSlide, 3000);
+  
+          showSlide(currentSlide);
+      </script>
+      
+      <div class="">
+      <ul id="list1" class="flex flex-row text-sm text-black space-x-5 list-none mt-5 ml-2.5  "> <!--list of admission box and other important links--->
+      <li><div id="admission"   class="w-[230px] h-[150px] bg-red-400 p-5 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Admission Inquiry</div></li>
+      <li><div id="courses"     class="w-[230px] h-[150px] bg-blue-400 p-5 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Courses Offered</div></li>
+      <li><div id="inst-fees"   class="w-[230px] h-[150px] bg-yellow-400 p-5 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Institution Fee (As per AFRC)</div></li>
+      <li><div id="student-ttb" class="w-[230px] h-[150px] bg-green-400 p-5 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Student College Time Table</div></li>
+      <li><div id="online-skill-test" class="w-[200px] h-[150px] bg-violet-400 p-5 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">Mandatory Disclousers</div></li>
+    </ul> </div>
+    <div class="text-lg font-sans ml-4 mt-5">Why Study in SDITS? </div>
+    <div class="text-sm font-sans ml-4 mt-5 w-[1000px] text-left"><em>The first Technical Institute in East Nimar Region,was <strong>Started in 2004</strong>. Institute functions under the patronage of Dadaji Dhuniwale Professional Education And Development Co-operative Society Limited Khandwa & is managed by Technocrats who have excelled in their respective profession. Since inception it is endeavoring for the quality and excellence in the technical education.</em></div>
+    <div class="text-sm font-sans ml-4 mt-2 w-[1000px] text-left"><em>SDITS has earned reputation not only in the”NIMAR” region but also in the entire state of Madhya Pradesh. Founder Chairman of society, Late Shri Tanwant Singh Keer (Ex. Minister), has put his effort to promote quality education along with Shri Rana Sajjan Singh an Agriculturist.</em></div>
+    <div class="text-sm font-sans ml-4 mt-2 w-[1000px] text-left"><em>It is affiliated to <strong>Rajiv Gandhi Technical University</strong> as pronounced RGPV, is the State Govt. authorized Technical University. This University is established in the year 1998, by Madhya Pradesh VidhanSabha Act 13, 1998.</em></div>
+    <div class="text-sm font-sans ml-4 mt-2 w-[1000px] text-left"><em>The college <strong>campus has 11.09 acres of land</strong> for its overall development. The main building of college has splendorous and attractive look and covers about 18300 sq. mtr. The building is considered to be one of the finest in the area and surrounded with natural beauty creating a good environment for study</em></div>
+    <div id="Library" class="flex w-full h-[200px] mt-5  inline border-4 border-rose-500 ">
+
+        <div id="image_of_library" class="">
+          <img src="./images/Library.jpg" width="250" height="250"/>
+        </div>
+
+        <div id="about_library" class="p-6">
+          <span class="font-sans text-lg">Library-</span>
+          <p class="text-sm"><em>The Institute has a huge and well maintained Library with the collection of 27118 books. It has two big reading halls, reference section, magazine section, audio visual section etc.
+            Leading technical journals are readily available. DELNET facility to access from renowned libraries in the country. Online access to different journal through it. E-Library facility available in the institute network.</em> </p>
+        </div>
+
+    </div>
+
+      </div>
+    </div>
+  </body>
+</html>
